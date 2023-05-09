@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Livewire\Services;
+use App\Http\Livewire\Shop;
 use App\Http\Livewire\Welcome;
 use Illuminate\Support\Facades\Route;
 
@@ -15,6 +17,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', Welcome::class);
+
+Route::get('/Shop', Shop::class)->name('Shop');
+
+Route::get('/Services', Services::class)->name('Services');
 
 Route::middleware([
     'auth:sanctum',
