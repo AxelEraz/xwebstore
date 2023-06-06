@@ -1,19 +1,22 @@
 <div>
 
     <!-- Caption & Contact form -->
+
     <div class="grid grid-cols-1 lg:grid-cols-2 mt-10">
         
         <div class="px-auto ml-10 mt-5 text-center">
             <h1 class="mb-4 text-3xl font-extrabold dark:text-gray-200 text-gray-900 md:text-5xl lg:text-6xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">¡Bienvenido al futuro!</span> <br> Te invito a desarrollar tu negocio on-line.</h1>
             <p class="text-lg font-normal text-gray-500 dark:text-gray-300 lg:text-xl">Solo necesitas estar a la altura para competir con los referentes de tu rubro</p>
-        </div>    
-        <div class="px-auto mx-auto mt-5">
-            <livewire:contact-form/>
+        </div>
+
+        <div class="px-auto mx-auto my-auto">
+            <livewire:wa-link/>
         </div>
     
     </div>
 
     <!-- Caption-->
+
     <div class="grid grid-cols-1 lg:grid-cols-2 items-center mt-20">
         
         <div class="mx-auto">
@@ -21,7 +24,6 @@
         </div>
 
         <div class="text-center mx-auto">
-
             <h5 class="mb-4 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-4xl dark:text-white">APROVECHA NUESTROS RECURSOS 
             <span class="text-blue-600 dark:text-blue-500">GRATIS</span> PARA 
             <span class="text-blue-600 dark:text-blue-500">POTENCIAR </span>TUS VENTAS</h5>       
@@ -30,10 +32,11 @@
     </div>
 
     <!-- Free services -->
-    
+
     <div class="grid grid-cols-1 lg:grid-cols-3 items-center py-10 mt-20 dark:bg-slate-600">
         
         <!-- Shop -->
+
         <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mx-auto py-5 px-5">
             <a href="#">
                     <x-shop />
@@ -49,7 +52,9 @@
                 </a>
             </div>
         </div>
+
         <!-- X-List -->
+
         <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mx-auto py-5 px-5">
             <a href="#">
                     <x-provider class="" />
@@ -67,6 +72,7 @@
         </div>
 
         <!-- Content -->
+
         <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mx-auto py-5 px-5">
             <a href="#">
                     <x-rrss class="" />
@@ -90,7 +96,6 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 items-center mt-20 mb-10">
         
         <div class="text-center mx-auto">
-
             <h5 class="mb-4 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-3xl lg:text-3xl dark:text-white ml-5">SOMOS LA MEJOR
             <span class="text-blue-600 dark:text-blue-500">INVERSIÓN</span> PARA EXPANDIRTE Y BRINDARTE EL CRECIMIENTO QUE BUSCAS.</h5>
             <h5 class="mb-4 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-3xl lg:text-3xl dark:text-white ml-5">

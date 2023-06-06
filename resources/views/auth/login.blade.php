@@ -44,5 +44,10 @@
                 </x-button>
             </div>
         </form>
+
+        <div class="text-center">
+            <H6 class="my-5">Todavía no tenes una cuenta, conseguí una ya mismo!</H6>
+            <x-button href="{{ route('register') }}" class="my-5">Registrate gratis</x-button>
+        </div>
     </x-authentication-card>
 </x-guest-layout>

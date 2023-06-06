@@ -3,14 +3,11 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
-use App\Models\Service;
 
-class Services extends Component
-
+class PaginationLinks extends Component
 {
     public function render()
     {
-        return view('livewire.services');
+        return view('livewire.pagination-links');
     }
-
 }

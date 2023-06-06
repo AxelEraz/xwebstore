@@ -1,0 +1,88 @@
+<?php
+
+namespace App\Http\Livewire;
+
+use App\Models\Product;
+
+use Darryldecode\Cart\Cart;
+
+use Livewire\Component;
+use Livewire\Request;
+
+class ShoppingCart extends Component
+{
+    public $cartQuantity;
+
+    public $product;
+
+    protected $listeners = ['addProduct', 'removeProduct', 'updateProduct'];
+
+
+    public function mount()
+    {
+        $userId = auth()->user()->id;
+    
+        $this->cartQuantity = \Cart::session($userId)->getTotalQuantity();
+    }
+    
+    public function render()
+    {    
+        return view('livewire.shopping-cart');
+    }
+
+    public function addProduct(Product $product)
+    {
+        $userId = auth()->user()->id;
+
+        \Cart::session($userId)->add(array(
+            'id' => $product->id, // inique row ID
+            'name' => $product->title,
+            'price' => $product->price,
+            'quantity' => 1,
+            'attributes' => array(),
+            'associatedModel' => $product
+        ));
+        
+        return back()->with(session()->flash('message', 'Tu producto fue agregado al carrito'));
+   
+    }
+    
+    public function removeProduct ($id)
+    {
+        
+        $userId = auth()->user()->id;
+
+        \Cart::session($userId)->remove($id);
+        
+        return back()->with(session()->flash('message', 'Tu producto fue eliminado del carrito'));
+    }
+    
+    public function updateProduct ($quantity)
+    {
+        
+        $userId = auth()->user()->id;
+
+            \Cart::session($userId)->update($id, array(
+                'quantity' => $quantity,
+                ));
+            
+            return back()->with(session()->flash('message', 'Tu producto fue eliminado del carrito'));
+    }
+}
+
+//Te extraño pero no va con mi onda
+//So, lo escupo en la canción
+//Mi alma destrozada
+//Ya no busca salvación
+//Sólo encuentra calma
+//Peleando el primer millon
+
+//Siento q es la solucion
+//who
+
+//Y por eso me amanezco
+//Salgo pa la calle
+//Ya no es pa tomar fresco
+//Mis perros joseando
+//Buscamo el primer puesto
+//y 
